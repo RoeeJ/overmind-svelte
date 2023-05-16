@@ -21,7 +21,7 @@ export function createMixin<Config extends IConfiguration>(
 
   const subscribe = (listener) => {
     // @ts-ignore
-    const tree = overmind.proxyStateTreeInstance.getTrackStateTree()
+    const tree = overmind.proxyStateTreeInstance.getTrackStateTreeWithProxifier()
     const componentInstanceId = nextComponentInstanceId++
     let isUpdating = false
 
